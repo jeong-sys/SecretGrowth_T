@@ -27,12 +27,19 @@
     - UserController : 회원가입 관리
       
 - Service Layer 패턴 : 비즈니스 로직과 데이터 엑세스 로직을 분리하는 서비스 레이어로 동작
-  - DayService, FindIDService, LoginService, LogService, UserService\
+  - DayService
+  - FindIDService
+  - LoginService
+  - LogService
+  - UserService
      
 - Dependency Injection 패턴 : @Autowired를 통한 Service 인스턴스 자동 주입
 
 - Repository 패턴 : 데이터베이스와의 상호작용을 캡슐화하여 데이터 엑세스 조직을 컨트롤러부터 분리
-  - DayRepository, FindIDRepository, LogRepository, UserRepository
+  - DayRepository
+  - FindIDRepository
+  - LogRepository
+  - UserRepository
   
 - Singleton 패턴 : @Bean으로 싱글톤 관리
   - SecutiryConfig : 비밀번호 암호화 관리
