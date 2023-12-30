@@ -16,11 +16,11 @@
 ## 사용 패턴
 
 - MVC 패턴 : 사용자 인터페이스를 로직에서 분리하여 애플리케이션 구조 구성
-  a. Model(entity)
+  - Model(entity)
     - Day, Log, User
-  b. View
+  - View
     - 사용한 여러 html, js, css
-  c. Controller
+  - Controller
     - FindIDController : 이름, 생일 입력 받아 아이디 찾기
     - LogController : 게시글 관리(CRUD)
     - LoginController : 로그인 관리
