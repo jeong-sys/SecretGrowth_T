@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>아이디 찾기</title>
+</head>
+<body>
+<h2>아이디 찾기</h2>
+
+<form action="/findUserId" method="post">
+    <div>
+        <label for="name">이름:</label><br>
+        <input type="text" id="name" name="name"><br>
+    </div>
+    <div>
+        <label for="dateOfBirth">생년월일:</label><br>
+        <input type="date" id="dateOfBirth" name="dateOfBirth"><br>
+    </div>
+    <input type="submit" value="아이디 찾기">
+</form>
+
+<!-- 아이디 찾기 결과 메시지 -->
+<p th:if="${userId}" th:text="${userId}"></p>
+<p><a href="/login">로그인하기</a></p>
+</body>
+</html>

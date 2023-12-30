@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Log</title>
+</head>
+<body>
+<h2>Create New Log</h2>
+<form th:action="@{/logs/new}" th:object="${log}" method="post">
+    <label>Title: <input type="text" th:field="*{title}" /></label><br/>
+    <label>Plant: <input type="text" th:field="*{content}" /></label><br/>
+
+    <button type="submit">Create Log</button>
+</form>
+<a th:href="@{/logs}">Back to Log List</a>
+</body>
+</html>

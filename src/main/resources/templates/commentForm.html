@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Comment</title>
+</head>
+<body>
+<h2 th:if="${log}" th:text="${log.title}"></h2>
+<form th:action="@{/logs/{logId}/new(logId=${log.id})}" th:object="${day}" method="post">
+    <label>Log: <input type="text" th:field="*{text}" /></label><br/>
+
+    <button type="submit">댓글 추가</button>
+</form>
+<a th:href="@{/logs/{logId}(logId=${log.id})}">Back to Log</a>
+</body>
+</html>

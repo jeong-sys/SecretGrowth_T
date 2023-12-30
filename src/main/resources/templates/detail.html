@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Detail</title>
+</head>
+<body>
+<h2>Log Detail</h2>
+<div>
+    <p>ID: <span th:text="${log.id}"></span></p>
+    <p>Title: <span th:text="${log.title}"></span></p>
+    <p>Plant: <span th:text="${log.content}"></span></p>
+    <p>Created At: <span th:text="${#temporals.format(log.createdAt, 'yyyy-MM-dd HH:mm')}"></span></p>
+</div>
+<div>
+    <!-- 댓글 목록 출력 -->
+    <h3>Comments</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Day</th>
+            <th>Text</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="comment, commentIndex : ${log.days}">
+            <td th:text="${commentIndex.index + 1}"></td>
+            <td th:text="${comment.text}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <!-- 댓글 작성 폼 보여주는 버튼 -->
+    <a th:href="@{/logs/{logId}/new(logId=${log.id})}">Add Comment</a>
+</div>
+<div>
+    <a th:href="@{/logs}">Back to Log List</a>
+</div>
+</body>
+</html>

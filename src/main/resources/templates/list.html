@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log List</title>
+</head>
+<body>
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 15px;
+    }
+</style>
+<h2>Log List</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID		</th>
+        <th>Title	</th>
+        <th>Plant	</th>
+        <th>Created At	</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="log : ${logs}">
+        <td th:text="${log.id}"></td>
+        <td th:text="${log.title}"></td>
+        <td th:text="${log.content}"></td>
+        <td th:text="${#temporals.format(log.createdAt, 'yyyy-MM-dd HH:mm')}"></td>
+        <td>
+            <a th:href="@{/logs/{id}(id=${log.id})}">View</a>
+            <a th:href="@{/logs/{id}/delete(id=${log.id})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/logs/new}">Create New Log</a>
+</body>
+</html>
