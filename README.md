@@ -45,6 +45,8 @@
   - SecutiryConfig : 비밀번호 암호화 관리
 
 ## 환경 설정
-- DB : MySQL(ver 8.1.0)
+- 설치
+   - DB : MySQL(ver 8.1.0)
+   - Java : JDK17
 - Spring boot version : 3.2.0
-- Java : JDK17
+
