@@ -45,6 +45,8 @@
   - SecutiryConfig : 비밀번호 암호화 관리
 
 ## 환경 설정
+- 개발 환경
+   - IntelliJ
 - 설치
    - DB : MySQL(ver 8.1.0)
    - Java : JDK17
