@@ -1,5 +1,5 @@
 # <div align="center"> 🍀 성장의 비밀 🍀 </div>
-[![code](https://img.shields.io/badge/Code-JAVA-orange)](https://docs.python.org/3/license.html)
+[![code](https://img.shields.io/badge/Code-JAVA-orange)]
 [![DBMS](https://img.shields.io/badge/DBMS-MySQL-blue)](https://www.mysql.com/downloads/)
 > 교육용 콘텐츠 개발을 목적으로 한 식물 성장 파악 일지
 
